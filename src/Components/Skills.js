@@ -34,12 +34,12 @@ function Skills() {
 
         <SwiperSlide>
           <div className="myskills1" >
-            <p> HTML & CSS</p>
+            <p> Javascript </p>
           </div>
         </SwiperSlide>
         <SwiperSlide>
           <div className="myskills1" >
-            <p> Javascript </p>
+            <p> HTML & CSS </p>
           </div>
         </SwiperSlide>
         <SwiperSlide>
