@@ -11,16 +11,20 @@ function App() {
   return (
 
     <Router>
+
       <div className="background" style={{
         backgroundImage: `url("/Images/image.png")`,
         backgroundSize: 'cover',
         backgroundPosition: 'center center',
         backgroundRepeat: 'no-repeat',
         height: '100vh',
-        }} >
+        width: '100%',
+        touchAction: "none"
+      }} >
+
         <Header />
         <Routes>
-          <Route exact path='/' element={<Pow/>}/>
+          <Route exact path='/' element={<Pow />} />
         </Routes>
         <Routes>
           <Route exact path='/skills' element={<Skills />} />

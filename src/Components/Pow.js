@@ -28,19 +28,19 @@ function Pow() {
       >
         <SwiperSlide>
           <div className="taketherapy" style={{display:"flex", justifyContent:"center", alignItems:"center", height:"275px", width:"410px" }}>
-          <a href='https://www.behance.net/gallery/162367405/Take-Therapy' target='_blank' rel='noreferrer' ><img className="project1" style={{height:"100%", width:"100%", objectFit:"cover", borderRadius:"20px", cursor:"pointer" }} src="/Images/1.png" alt="slide_image" /> </a>
+          <a href='https://www.behance.net/gallery/162367405/Take-Therapy' target='_blank' rel='noreferrer' > <img className="project1" style={{height:"100%", width:"100%", objectFit:"cover", borderRadius:"20px", cursor:"pointer" }} src="/Images/1.png" alt="slide_image" /> </a>
           </div>
         </SwiperSlide>
        
         <SwiperSlide>
-        <div className="gradientanim" style={{height:"275px", width:"410px", borderRadius:"30px" }}>
-          <img  className="project2" style={{height:"100%", width:"100%", objectFit:"cover", borderRadius:"20px" }}   src="/Images/7.png" alt="slide_image" />
+        <div className="gradientanim" style={{display:"flex", justifyContent:"center", alignItems:"center", height:"275px", width:"410px", borderRadius:"30px" }}>
+        <a href='https://www.behance.net/gallery/162367405/Take-Therapy' target='_blank' rel='noreferrer' > <img  className="project2" style={{height:"100%", width:"100%", objectFit:"cover", borderRadius:"20px" }}   src="/Images/7.png" alt="slide_image" /> </a>
           </div>
         </SwiperSlide>
 
         <SwiperSlide>
-        <div className="moresoon" style={{height:"275px", width:"410px", borderRadius:"30px"}}>
-          <img  className="project3" style={{height:"100%", width:"100%", objectFit:"cover", borderRadius:"20px" }}  src="/Images/8.png" alt="slide_image" />
+        <div className="moresoon" style={{display:"flex", justifyContent:"center", alignItems:"center", height:"275px", width:"410px", borderRadius:"30px"}}>
+        <a href='https://www.behance.net/gallery/162367405/Take-Therapy' target='_blank' rel='noreferrer' >  <img  className="project3" style={{height:"100%", width:"100%", objectFit:"cover", borderRadius:"20px" }}  src="/Images/8.png" alt="slide_image" /> </a> 
         </div>   
          </SwiperSlide>        
       </Swiper>

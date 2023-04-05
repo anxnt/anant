@@ -8,7 +8,7 @@ export default function Navbar() {
     [location]);
 
   return (
-    <div style={{ display: "flex", alignItems: "center", justifyContent: "center", marginBottom: "120px", marginLeft: "-45px" }}>
+    <div className='buttonnavbar' style={{ display: "flex", alignItems: "center", justifyContent: "center", marginBottom: "120px", marginLeft: "-45px" }}>
 
       <Link to='/connect'><button className="button1" style={{
         background: location.pathname === "/connect" ? "black" : "#F3F3F3",
