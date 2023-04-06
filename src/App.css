@@ -182,6 +182,11 @@
     .gradientanim, .moresoon, .taketherapy {
       width: 330px !important;
     }
+
+    .buttonnavbar{
+      display: block !important;
+      margin-top: 208px !important;
+    }
   
   }
 
