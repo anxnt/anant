@@ -1,76 +1,56 @@
-import React from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
+import React, { useState } from 'react';
 
-import 'swiper/css';
-import 'swiper/css/effect-coverflow';
-import 'swiper/css/pagination';
-import 'swiper/css/navigation';
+const items = [
+  { id: 1, label: 'Javascript' },
+  { id: 2, label: 'React' },
+  { id: 3, label: 'HTML & CSS' },
+  { id: 4, label: 'Figma' },
+  { id: 5, label: 'Blender'  },
+];
 
-import { EffectCoverflow, Pagination, Navigation } from 'swiper';
+function Carousel() {
+  const [activeIndex, setActiveIndex] = useState(0);
 
-function Skills() {
+  const handleUpClick = () => {
+    setActiveIndex(activeIndex === 0 ? items.length - 1 : activeIndex - 1);
+  };
+
+  const handleDownClick = () => {
+    setActiveIndex(activeIndex === items.length - 1 ? 0 : activeIndex + 1);
+  };
+
   return (
-    <div className="skillscontainer">
-      <Swiper
-        direction='vertical'
-        effect={'coverflow'}
-        grabCursor={false}
-        centeredSlides={true}
-        loop={false}
-        slidesPerView={'auto'}
-        coverflowEffect={{
-          rotate: 0,
-          stretch: 0,
-          depth: 100,
-          modifier: 2.5,
-        }}
-        navigation={{
-          clickable: true,
-        }}
-        modules={[EffectCoverflow, Pagination, Navigation]}
-        className="swiper_container"
-        style={{ width: "450px", height: "100px", display: "flex",  justifyContent: "center"}}
-      >
+    <div style={{display:"flex", justifyContent:"center", alignItems:"center", marginTop:"150px"}}>
+    <button className="up-button" onClick={handleUpClick}>
+    <ion-icon name="caret-up-outline"></ion-icon>
+      </button>
 
-        <SwiperSlide>
-          <div className="myskills1" >
-            <p> Javascript </p>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="myskills1" >
-            <p> HTML & CSS </p>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="myskills1" >
-            <p> React</p>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="myskills1" >
-            <p> Next JS</p>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="myskills1" >
-            <p> UI/UX Design</p>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="myskills1" >
-            <p> Figma </p>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="myskills1" >
-            <p> Blender </p>
-          </div>
-        </SwiperSlide>
+      <button className="down-button" onClick={handleDownClick}>
+      <ion-icon name="caret-down-outline" className="down-button" onClick={handleDownClick}></ion-icon>
+      </button>
 
-      </Swiper>
+    <div className="carousel">
+
+      <div className="items">
+        {items.map((item, index) => (
+          <div
+            key={item.id}
+            className={`item ${activeIndex === index ? 'active' : ''}`}
+            style={{
+              transform: `translateY(${(index - activeIndex) * 100}%) scale(${
+                activeIndex === index ? 1 : 0.5
+              })`,
+              zIndex: `${activeIndex === index ? items.length : items.length - index}`,
+              opacity: `${activeIndex === index ? 1 : 0.5}`,
+            }}
+          >
+          <div className="label">{item.label}</div>
+          </div>
+        ))}
+      </div>
+    </div>
     </div>
   );
 }
 
-export default Skills;
+export default Carousel;

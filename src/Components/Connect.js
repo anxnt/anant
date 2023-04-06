@@ -1,68 +1,57 @@
-import React from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
+import React, { useState } from 'react';
 
-import 'swiper/css';
-import 'swiper/css/effect-coverflow';
-import 'swiper/css/pagination';
-import 'swiper/css/navigation';
+const items = [
+  { id: 1, label: 'Twitter',  url: "https://www.twitter.com/anant715", },
+  { id: 2, label: 'Instagram', url: "https://www.instagram.com/anant7", },
+  { id: 3, label: 'Linkedin', url: "https://www.linkedin.com/in/anant-b68484218/", },
+  { id: 4, label: 'Peerlist', url: "https://peerlist.io/anant7", },
+  { id: 5, label: 'Behance', url: "https://www.behance.net/anantkumar11",  },
+  { id: 6, label: 'Diamond', url: "https://diamondapp.com/u/anxnt",  },
+];
 
-import { EffectCoverflow, Pagination, Navigation } from 'swiper';
+function Carousel() {
+  const [activeIndex, setActiveIndex] = useState(0);
 
-function Skills() {
+  const handleUpClick = () => {
+    setActiveIndex(activeIndex === 0 ? items.length - 1 : activeIndex - 1);
+  };
+
+  const handleDownClick = () => {
+    setActiveIndex(activeIndex === items.length - 1 ? 0 : activeIndex + 1);
+  };
+
   return (
-    <div className="skillscontainer">
-      <Swiper
-        direction='vertical'
-        effect={'coverflow'}
-        grabCursor={false}
-        centeredSlides={true}
-        loop={false}
-        slidesPerView={'auto'}
-        coverflowEffect={{
-          rotate: 0,
-          stretch: 0,
-          depth: 100,
-          modifier: 2.5,
-        }}
-        navigation={{
-          clickable: true,
-        }}
-        modules={[EffectCoverflow, Pagination, Navigation]}
-        className="swiper_container"
-        style={{ width: "450px", height: "100px", display: "flex",  justifyContent: "center"}}
-      >
+    <div style={{display:"flex", justifyContent:"center", alignItems:"center", marginTop:"150px"}}>
+      <button className="up-button" onClick={handleUpClick}>
+        <ion-icon name="caret-up-outline"></ion-icon>
+      </button>
+      
+      <button className="down-button" onClick={handleDownClick}>
+        <ion-icon name="caret-down-outline" className="down-button" onClick={handleDownClick}></ion-icon>
+      </button>
 
-        <SwiperSlide>
-          <div className="myskills" >
-            <a href='https://twitter.com/anant715' target='_blank' rel="noreferrer" style={{textDecoration:"none", color:"white", margin:"auto"}}> Twitter </a>
-          </div>
-        </SwiperSlide>
-
-        <SwiperSlide>
-          <div className="myskills" >
-            <a href='https://peerlist.io/anant7' target='_blank' rel="noreferrer" style={{textDecoration:"none", color:"white", margin:"auto"}}> Peerlist </a>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="myskills" >
-          <a href='https://instagram.com/anant7' target='_blank' rel="noreferrer" style={{textDecoration:"none", color:"white", margin:"auto"}}> Instagram </a>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="myskills" >
-          <a href='https://www.linkedin.com/in/anant-b68484218/' target='_blank' rel="noreferrer" style={{textDecoration:"none", color:"white", margin:"auto"}}> Linkedin </a>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="myskills" >
-          <a href='https://www.behance.net/anantkumar11' target='_blank' rel="noreferrer" style={{textDecoration:"none", color:"white", margin:"auto"}}> Behance </a>
-          </div>
-        </SwiperSlide>
-
-      </Swiper>
+      <div className="carousel">
+        <div className="items">
+          {items.map((item, index) => (
+            <a key={item.id} href={item.url} target="_blank" rel="noopener noreferrer" style={{color:"inherit", display:"contents"}}>
+              <div
+                className={`item ${activeIndex === index ? 'active' : ''}`}
+                style={{
+                  transform: `translateY(${(index - activeIndex) * 100}%) scale(${
+                    activeIndex === index ? 1 : 0.5
+                  })`,
+                  zIndex: `${activeIndex === index ? items.length : items.length - index}`,
+                  opacity: `${activeIndex === index ? 1 : 0.5}`,
+                }}
+              >
+                <div className="label">{item.label} </div>
+              </div>
+            </a>
+          ))}
+        </div>
+      </div>
     </div>
   );
 }
 
-export default Skills;
-
+export default Carousel;
