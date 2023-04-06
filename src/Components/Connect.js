@@ -21,7 +21,7 @@ function Carousel() {
   };
 
   return (
-    <div style={{display:"flex", justifyContent:"center", alignItems:"center", marginTop:"150px"}}>
+    <div className='mainhead' style={{display:"flex", justifyContent:"center", alignItems:"center", marginTop:"150px"}}>
       <button className="up-button" onClick={handleUpClick}>
         <ion-icon name="caret-up-outline"></ion-icon>
       </button>
