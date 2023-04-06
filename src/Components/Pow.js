@@ -10,7 +10,7 @@ import { EffectCards, Pagination, Navigation } from 'swiper';
 
 function Pow() {
   return (
-    <div className="container">
+    <div className="container" style={{width:"100%", maxWidth:"1200px",}}>
       <Swiper
         effect={'cards'}
         grabCursor={false}
