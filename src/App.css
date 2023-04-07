@@ -346,6 +346,23 @@ ion-icon{
   .items{
     font-size: 24px;
   }
+}
 
+  @media screen and (max-height: 440px) {
+
+
+    .buttonnavbar{
+      margin-top: 355px !important;
+      
     }
+
+    .name{
+      margin-top: 220px !important;
+    }
+
+    .container{
+      margin-top: 180px;
+    }
+  }
+    
 

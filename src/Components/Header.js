@@ -10,7 +10,7 @@ export default function Header() {
 
   return (
     <>
-    <div style={{display:"flex", justifyContent:"center", alignItems:"center", marginBottom:"90px"}}>
+    <div classname="superman" style={{display:"flex", justifyContent:"center", alignItems:"center", marginBottom:"90px"}}>
     <div className='name'>
       <p className="heading">anant</p>
       <h2 className="bio">Design Thinker, Code Craftsman</h2>
