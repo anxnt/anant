@@ -34,7 +34,7 @@ function Pow() {
        
         <SwiperSlide>
         <div className="gradientanim" style={{display:"flex", justifyContent:"center", alignItems:"center", height:"275px", width:"410px", borderRadius:"30px" }}>
-        <a href='https://www.behance.net/gallery/162367405/Take-Therapy' target='_blank' rel='noreferrer' > <img  className="project2" style={{height:"100%", width:"100%", objectFit:"cover", borderRadius:"20px" }}   src="/Images/7.png" alt="slide_image" /> </a>
+        <a href='http://gradientanim.vercel.app/' target='_blank' rel='noreferrer' > <img  className="project2" style={{height:"100%", width:"100%", objectFit:"cover", borderRadius:"20px" }}   src="/Images/7.png" alt="slide_image" /> </a>
           </div>
         </SwiperSlide>
 
