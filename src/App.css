@@ -3,10 +3,10 @@
 .background {
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .heading {
-  position: absolute;
   z-index: 1;
   display: inline-block;
   margin: auto;
@@ -17,6 +17,7 @@
   font-size: 130px;
   color: #ffffff;
   text-shadow: 8px 0px 0px #000000;
+  margin-bottom: 450px;
 }
 
 .bio {
@@ -82,7 +83,7 @@
 
 .container {
   position: absolute;
-  margin-top: 400px;
+  margin-top: 330px;
   display: flex;
   width: 1100px;
   height: 275px;
@@ -180,7 +181,7 @@
     justify-content: center;
     align-items: center;
     position: absolute;
-    margin-bottom: 95px;
+    margin-bottom: 70px;
     background: none;
     border: none;
 }
@@ -206,7 +207,7 @@ ion-icon{
 @media only screen and (max-width: 768px) {
     .heading{
       font-size: 80px;
-      text-shadow: 5px 0px 0px #000000;
+      text-shadow: 3px 0px 0px #000000;
     }
 
     .bio{
@@ -218,6 +219,7 @@ ion-icon{
 
     .buttonnavbar{
       margin-bottom: 400px !important;
+
     } 
 
     .button1{
@@ -239,6 +241,7 @@ ion-icon{
       width: 500px !important;
       height: 130px !important;
       margin-right: 165px;
+      margin-top: 270px ;
     }
 
     .gradientanim, .moresoon, .taketherapy {
@@ -246,8 +249,8 @@ ion-icon{
     }
 
     .buttonnavbar{
-      display: block !important;
-      margin-top: 208px !important;
+      margin-top: 234px !important;
+      margin-left: -90px !important;
     }
 
     .taketherapy{
@@ -257,10 +260,92 @@ ion-icon{
     .moresoon{
       height: 235px !important;
     }
-
+     
     .mainhead{
-      margin-top: -75px !important;
+      margin-top: 75px !important;
     }
+  }
+
+    @media only screen and (max-height: 585px){
+
+      .name{
+        margin-top: 120px !important; 
+      }
+
+      .buttonnavbar{
+        margin-top: 277px !important;
+      }
+
+      .heading{
+      font-size: 60px;
+      text-shadow: 3px 0x 0x #000000 !important;
+      }
+
+      .bio{
+        font-size: 16px;
+        width: 124px;
+        margin-top: 93px;
+      }
+
+      .button1, .button2, .button3{
+        width: 52px;
+        height: 26px;
+        font-size: 9px;
+      }
+
+      .button1 {
+        margin-left: 66px;
+    }
+
+      .button3 {
+      margin-left: -66px;
+  }
+
+    .buttonnavbar {
+    margin-left: -48px !important;
   
   }
+
+  .taketherapy{
+    width: 220px !important;
+  }
+
+  .gradientanim{
+    width: 220px !important;
+  }
+
+  .moresoon{
+    width: 220px !important;
+  }
+
+  .container{
+    margin-top: 140px;
+    margin-right: 100px;
+    max-width: 370px !important;
+  }
+
+  .mainhead {
+    margin-top: 0px !important;
+}
+
+  .up-button{
+    width: 33px;
+    margin-bottom: 80px;
+  }
+
+  .down-button{
+    width: 33px;
+    margin-top: 254px;
+
+  }
+
+  .carousel{
+    margin-top: 85px;
+  }
+
+  .items{
+    font-size: 24px;
+  }
+
+    }
 

@@ -13,13 +13,13 @@ function App() {
     <Router>
 
       <div className="background" style={{
-        backgroundImage: `url("/Images/image.png")`,
+        backgroundImage: `url("/Images/Rectangle.png")`,
         backgroundSize: 'cover',
         backgroundPosition: 'center center',
         backgroundRepeat: 'no-repeat',
         height: '100vh',
         width: '100%',
-        touchAction: "none"
+        
       }} >
 
         <Header />
